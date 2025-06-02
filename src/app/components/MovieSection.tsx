@@ -17,9 +17,10 @@ const MovieSection: React.FC<MovieSectionProps> = ({ title, movies }) => {
   return (
     <section className="mb-12">
       <h2 className="text-2xl font-semibold mb-4">{title}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {movies.map(movie => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {movies.map((movie) => (
           <MovieCard
+            key={movie.id}
             identifier={movie.id}
             title={movie.title}
             releaseDate={movie.release_date}
